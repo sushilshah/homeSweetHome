@@ -1,0 +1,7 @@
+{
+    "policyName": "PubSubToAnyTopic",
+    "policyArn": "arn:aws:iot:ap-northeast-1:711616504522:policy/PubSubToAnyTopic",
+    "policyDocument": "{\n    \"Version\": \"2012-10-17\", \n    \"Statement\": [{\n        \"Effect\": \"Allow\",\n        \"Action\":[\"iot:*\"],\n        \"Resource\": [\"*\"]\n    }]\n}\n",
+    "policyVersionId": "1"
+}
+

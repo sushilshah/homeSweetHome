@@ -1,0 +1,14 @@
+{
+    "Policy": {
+        "PolicyName": "iot-actions-policy",
+        "CreateDate": "2016-03-25T11:10:53.099Z",
+        "AttachmentCount": 0,
+        "IsAttachable": true,
+        "PolicyId": "ANPAJ6F4VAEWSHQYJYA3S",
+        "DefaultVersionId": "v1",
+        "Path": "/",
+        "Arn": "arn:aws:iam::711616504522:policy/iot-actions-policy",
+        "UpdateDate": "2016-03-25T11:10:53.099Z"
+    }
+}
+
