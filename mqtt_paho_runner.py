@@ -20,8 +20,7 @@ keyfile = "/home/pi/homeSweetHome/aws_setup/myHomePiPrivateKey.pem"
  
 client = mqtt.Client()
 
-client.tls_set(ca_certs, certfile=certfile, keyfile=keyfile, cert_reqs=ssl.CERT_REQUIRED,
-    tls_version=ssl.PROTOCOL_TLSv1, ciphers=None)
+client.tls_set(ca_certs, certfile=certfile, keyfile=keyfile)
 #tls_set(ca_certs, certfile=None, keyfile=None, cert_reqs=ssl.CERT_REQUIRED,
 #   tls_version=ssl.PROTOCOL_TLSv1, ciphers=None)
 
@@ -29,7 +28,7 @@ client.on_connect = on_connect
 client.on_message = on_message
 
 #client.connect("iot.eclipse.org", 1883, 60)
-connect(host, port=port, keepalive=60, bind_address="")
+client.connect(host, port=port, keepalive=60, bind_address="")
 # Blocking call that processes network traffic, dispatches callbacks and
 # handles reconnecting.
 # Other loop*() functions are available that give a threaded interface and a
