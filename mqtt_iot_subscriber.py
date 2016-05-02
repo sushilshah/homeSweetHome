@@ -44,8 +44,11 @@ mqttc.tls_set(ca_cert,
 #connecting to aws-account-specific-iot-endpoint
 mqttc.connect(host, port=port) #AWS IoT service hostname and portno
 
+topic = "$aws/things/MyHomePi/shadow/update"
+
 #the topic to publish to
-mqttc.subscribe("$aws/things/mqtt-listener/shadow/update/#", qos=1) #The names of these topics start with $aws/things/thingName/shadow."
+mqttc.subscribe(topic, qos=1) #The names of these topics start with $aws/things/thingName/shadow."
+#mqttc.publish("my/topic",'{"foo":"foo"}')
 
 #automatically handles reconnecting
 mqttc.loop_forever()
